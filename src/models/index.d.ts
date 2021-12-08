@@ -24,6 +24,7 @@ export declare class Employee {
   readonly Year2021Nov?: number;
   readonly totalPension?: number;
   readonly pensionHolder?: boolean;
+  readonly team?: string;
   readonly createdAt?: string;
   readonly updatedAt?: string;
   constructor(init: ModelInit<Employee, EmployeeMetaData>);

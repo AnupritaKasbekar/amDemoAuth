@@ -8,7 +8,7 @@ import {Authenticator} from '@aws-amplify/ui-react';
 const MainHeader = () => {
   return (
     <div className="App">
-       <h1>in header</h1>
+     
        <h1>Employee Pension </h1>
     <Link className="btn btn-primary" to="/Create">Create</Link> |
   
@@ -21,7 +21,7 @@ const MainHeader = () => {
        <Authenticator>
     {({ signOut, user }) => (
         <main>
-          <h1>Hello {user.username} If you want to sign out plase click on sign out Button</h1>
+          <h1>Hello If you want to sign out plase click on sign out Button</h1>
           <button onClick={signOut} class="btn btn-primary">Sign out</button>
         </main>
       )}
