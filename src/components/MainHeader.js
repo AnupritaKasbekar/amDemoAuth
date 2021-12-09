@@ -22,7 +22,7 @@ const MainHeader = () => {
     {({ signOut, user }) => (
         <main>
           <h1>Hello If you want to sign out plase click on sign out Button</h1>
-          <button onClick={signOut} class="btn btn-primary">Sign out</button>
+          <button onClick={signOut} className="btn btn-primary">Sign out</button>
         </main>
       )}
     </Authenticator>
