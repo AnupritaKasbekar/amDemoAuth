@@ -1,8 +1,16 @@
-/*import React, {useEffect, useState } from 'react';*/
+import React from 'react';
 import { DataStore } from '@aws-amplify/datastore';
 import { Employee } from '../models';
 /*import { render } from 'react-dom';*/
 import { Component } from 'react';
+
+
+
+import awsconfig from '../aws-exports';
+import Amplify from '@aws-amplify/core';
+
+Amplify.configure(awsconfig);
+
 class Create extends Component{
   constructor(props)  {
     super(props);
@@ -32,7 +40,8 @@ class Create extends Component{
         avgannualsal:Number(this.state.avgannualsal),
         avgsalthrmonth:Number(this.state.avgsalthrmonth),
         totalworkdays:Number(this.state.totalworkdays),
-        pensionHolder:this.state.pensionHolder
+        pensionHolder:Boolean(this.state.pensionHolder)
+       
       })
       
     );
@@ -86,11 +95,7 @@ class Create extends Component{
       pensionHolder:event.target.value
     })
   }
-  /*handlecurrentmonthpensionChange = event =>{
-    this.setState({
-      currentmonthpension:event.target.value
-    })
-  }*/
+  
 
   /*===========================handle property end======================== */
   render() {

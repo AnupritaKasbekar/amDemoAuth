@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+
 import { Route,Routes, BrowserRouter as Router } from 'react-router-dom';
 
 import Create from './pages/Create';
@@ -11,6 +13,7 @@ import Update from './pages/Update';
 import Delete from './pages/Delete';
 import GetList from './pages/GetList';
 import Search from './pages/Search';
+import Export from './pages/Export';
 
 ReactDOM.render(
   <Router>
@@ -21,7 +24,7 @@ ReactDOM.render(
        <Route path="/Delete" element={<Delete/>}></Route>
        <Route path="/GetList" element={<GetList/>}></Route>
        <Route path="/Search" element={<Search/>}></Route>
-      
+       <Route path="/Export" element={<Export/>}></Route>
   </Routes>
  </Router>,
   document.getElementById('root')

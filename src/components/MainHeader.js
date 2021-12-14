@@ -15,7 +15,8 @@ const MainHeader = () => {
     <Link className="btn btn-primary" to="/Update">Update</Link>  |
     <Link  className="btn btn-primary" to="/Delete">Delete</Link>  |
     <Link className="btn btn-primary" to="/Search">Search</Link>  |
-    <Link className="btn btn-primary" to="/GetList">Get List</Link> 
+    <Link className="btn btn-primary" to="/GetList">Get List</Link> | 
+    <Link className="btn btn-primary" to="/Export">Export</Link> 
     <p>This task will help you to get all the employee data</p>
     <Outlet/>
        <Authenticator>
