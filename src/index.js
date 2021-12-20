@@ -15,6 +15,12 @@ import GetList from './pages/GetList';
 import Search from './pages/Search';
 import Export from './pages/Export';
 
+import CreatePension from './pages/CreatePension';
+import UpdatePension from './pages/UpdatePension';
+import DeletePension from './pages/DeletePension';
+import GetPensionList from './pages/GetPensionList';
+import ExportPension from './pages/ExportPension';
+
 ReactDOM.render(
   <Router>
   <Routes>
@@ -25,6 +31,13 @@ ReactDOM.render(
        <Route path="/GetList" element={<GetList/>}></Route>
        <Route path="/Search" element={<Search/>}></Route>
        <Route path="/Export" element={<Export/>}></Route>
+
+     
+      <Route path="/CreatePension" element={<CreatePension/>}></Route>
+      <Route path="/UpdatePension" element={<UpdatePension/>}></Route>
+       <Route path="/DeletePension" element={<DeletePension/>}></Route>
+       <Route path="/GetPensionList" element={<GetPensionList/>}></Route>
+       <Route path="/ExportPension" element={<ExportPension/>}></Route>
   </Routes>
  </Router>,
   document.getElementById('root')

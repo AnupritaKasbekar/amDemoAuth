@@ -15,33 +15,29 @@ class Create extends Component{
   constructor(props)  {
     super(props);
     this.state = {
-      empid:'',
-      empName:'',
-      position:'',
-      team:'',
-      joindate:'',
-      avgannualsal: '',
-      avgsalthrmonth:'',
-      totalworkdays:'',
-      pensionHolder:''
+      empID:'',
+      employeename:'',
+      empTeam:'',
+      empPosition:'',
+      empDate:'',
+      pensionRetirement: '',
+      qualifiedNew:'',
+     
     };
   }
 
 
   handleSubmit = async(event)  =>{
-    alert(`${this.state.empid} ${this.state.empName} `);
+    alert(`${this.state.empID} ${this.state.employeename} ${this.state.empTeam} ${this.state.empDate} ${this.state.empPosition} ${this.state.pensionRetirement} ${this.state.qualifiedNew}`);
   const newPost = await DataStore.save(
       new Employee({
-        empid: Number(this.state.empid),
-        empName:this.state.empName,
-        position:this.state.position,
-        team:this.state.team,
-        joindate:this.state.joindate,
-        avgannualsal:Number(this.state.avgannualsal),
-        avgsalthrmonth:Number(this.state.avgsalthrmonth),
-        totalworkdays:Number(this.state.totalworkdays),
-        pensionHolder:Boolean(this.state.pensionHolder)
-       
+        empID: Number(this.state.empID),
+        employeename:this.state.employeename,
+        empTeam:this.state.empTeam,
+        empPosition:this.state.empPosition,
+        empDate:this.state.empDate,
+        pensionRetirement:this.state.pensionRetirement,
+        qualifiedNew:this.state.qualifiedNew,
       })
       
     );
@@ -50,41 +46,41 @@ class Create extends Component{
   }
   handleIdChange = event =>{
     this.setState({
-      empid:event.target.value
+      empID:event.target.value
     })
   }
   handleNameChange = event =>{
     this.setState({
-      empName:event.target.value
+      employeename:event.target.value
     })
   }
   handlePositionChange = event =>{
     this.setState({
-      position:event.target.value
+      empPosition:event.target.value
     })
   }
   handleTeamChange =event =>{
     this.setState({
-      team:event.target.value
+      empTeam:event.target.value
     })
   }
 
   handleJoinDateChange = event =>{
     this.setState({
-      joindate:event.target.value
+      empDate:event.target.value
     })
   }
-  handleavgannualsalChange =event =>{
+  handlepensionRetirementChange =event =>{
     this.setState({
-      avgannualsal:event.target.value
+      pensionRetirement:event.target.value
     })
   }
-  handleavgsalthrmonthChange = event =>{
+  handlequalifiedNewChange = event =>{
     this.setState({
-      avgsalthrmonth:event.target.value
+      qualifiedNew:event.target.value
     })
   }
-  handleworkdayChange = event =>{
+  /*handleworkdayChange = event =>{
     this.setState({
       totalworkdays:event.target.value
     })
@@ -94,7 +90,7 @@ class Create extends Component{
     this.setState({
       pensionHolder:event.target.value
     })
-  }
+  }*/
   
 
   /*===========================handle property end======================== */
@@ -106,35 +102,30 @@ class Create extends Component{
             
           <h1 className="text-center">Create Employee</h1>
           <label  className="form-label">Enter Employee ID</label>
-          <input type="text" value={this.state.empid} onChange={this.handleIdChange}  className="form-control" placeholder="123"/>
+          <input type="text" value={this.state.empID} onChange={this.handleIdChange}  className="form-control" placeholder="123"/>
 
           <label className="form-label">Enter Employee Name</label>
-          <input type="text" value={this.state.empName} onChange={this.handleNameChange} className="form-control" placeholder="Jack"/>
-
-          <label className="form-label">Enter Employee Position</label>
-          <input type="text" value={this.state.position} onChange={this.handlePositionChange}  className="form-control" placeholder="회장"/>
+          <input type="text" value={this.state.employeename} onChange={this.handleNameChange} className="form-control" placeholder="Jack"/>
 
           <label className="form-label">Enter Employee Team Name</label>
-          <input type="text" value={this.state.team} onChange={this.handleTeamChange}  className="form-control" placeholder="임원 (서울)"/>
+          <input type="text" value={this.state.empTeam} onChange={this.handleTeamChange}  className="form-control" placeholder="임원 (서울)"/>
+
+          <label className="form-label">Enter Employee Position</label>
+          <input type="text" value={this.state.empPosition} onChange={this.handlePositionChange}  className="form-control" placeholder="회장"/>
+
+        
               
           <label className="form-label">Enter Employee Join Date</label>
-          <input type="Date" value={this.state.joindate} onChange={this.handleJoinDateChange}  className="form-control" placeholder=""/>
+          <input type="Date" value={this.state.empDate} onChange={this.handleJoinDateChange}  className="form-control" placeholder=""/>
               
-          <label className="form-label">Avarage Annual Salary</label>
-          <input type="text" value={this.state.avgannualsal} onChange={this.handleavgannualsalChange}  className="form-control" placeholder=""/>
+          <label className="form-label">Pension /Retirement</label>
+          <input type="text" value={this.state.pensionRetirement} onChange={this.handlepensionRetirementChange}  className="form-control" placeholder=""/>
    
-          <label className="form-label">Avarage Annual 3 month Salary</label>
-          <input type="text" value={this.state.avgsalthrmonth} onChange={this.handleavgsalthrmonthChange}  className="form-control" placeholder=""/>
+          <label className="form-label">qualified / New</label>
+          <input type="text" value={this.state.qualifiedNew} onChange={this.handlequalifiedNewChange}  className="form-control" placeholder=""/>
 
-          <label  className="form-label">No. Of Work Days</label>
-          <input type="text" value={this.state.totalworkdays} onChange={this.handleworkdayChange}  className="form-control" placeholder=""/>
-
-          <label>Pension Holder</label>
-              <select value={this.state.pensionHolder} onChange={this.handlePensionChange}>
-                <option value="no">Yes</option>
-                <option value="yes">No</option>
-              </select>
-              </div>     
+        
+          </div>     
           <button className="btn btn-primary">Submit</button>
 
           

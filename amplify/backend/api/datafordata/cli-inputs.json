@@ -3,7 +3,7 @@
   "serviceConfiguration": {
     "apiName": "datafordata",
     "serviceName": "AppSync",
-    "gqlSchemaPath": "/tmp/amplify-3b9fb35b-c910-4f00-99a9-8f1fd4e1e791/amplify/backend/api/datafordata/schema.graphql",
+    "gqlSchemaPath": "/tmp/amplify-66f61212-26eb-410e-aef7-f36d75e894ad/amplify/backend/api/datafordata/schema.graphql",
     "defaultAuthType": {
       "mode": "API_KEY",
       "keyDescription": "api key description",

@@ -10,13 +10,22 @@ const MainHeader = () => {
     <div className="App">
      
        <h1>Employee Pension </h1>
-    <Link className="btn btn-primary" to="/Create">Create</Link> |
-  
-    <Link className="btn btn-primary" to="/Update">Update</Link>  |
-    <Link  className="btn btn-primary" to="/Delete">Delete</Link>  |
-    <Link className="btn btn-primary" to="/Search">Search</Link>  |
-    <Link className="btn btn-primary" to="/GetList">Get List</Link> | 
-    <Link className="btn btn-primary" to="/Export">Export</Link> 
+   || <Link className="btn btn-primary" to="/Create">Create Employee</Link> |
+    
+    <Link className="btn btn-primary" to="/Update">Update Employee</Link>  |
+    <Link  className="btn btn-primary" to="/Delete">Delete Employee</Link>  |
+    <Link className="btn btn-primary" to="/Search">Search </Link>  |
+    <Link className="btn btn-primary" to="/GetList">Get List Employee</Link> |
+    <Link className="btn btn-primary" to="/Export">Export Employee</Link>  ||
+    <br></br>
+    <br></br>
+     
+ 
+    <Link className="btn btn-primary" to="/CreatePension">Create Employee Pension Data</Link> |
+    <Link className="btn btn-primary" to="/UpdatePension">Create Employee Pension Data</Link> |
+    <Link  className="btn btn-primary" to="/DeletePension">Delete Employee Pension Data</Link>  |
+    <Link className="btn btn-primary" to="/GetPensionList">Get Pension List </Link> |
+    <Link className="btn btn-primary" to="/ExportPension">Export Pension Data</Link> ||
     <p>This task will help you to get all the employee data</p>
     <Outlet/>
        <Authenticator>

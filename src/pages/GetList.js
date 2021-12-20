@@ -17,13 +17,13 @@ const tableRows = employees.map((employee)=>{
  
 return(
 <tr className="text-white">
-<td>{employee.empid}</td>
-<td>{employee.empName}</td>
-<td>{employee.position}</td>
-<td>{employee.team}</td>
-<td>{employee.joindate}</td>
-<td>{employee.avgannualsal}</td>
-<td>{employee.totalworkdays}</td>
+<td>{employee.empID}</td>
+<td>{employee.employeename}</td>
+<td>{employee.empTeam}</td>
+<td>{employee.empPosition}</td>
+<td>{employee.empDate}</td>
+<td>{employee.pensionRetirement}</td>
+<td>{employee.qualifiedNew}</td>
 </tr>
 );
 });
@@ -37,11 +37,11 @@ return(
         <tr>
           <th>ID</th>
           <th>Name</th>
-          <th>Position</th>
           <th>Team</th>
+          <th>Position</th>
           <th>Date</th>
-          <th>AvgAnnualSal</th>
-          <th>workday</th>
+          <th>Pension/Retirement</th>
+          <th>Qualified/New</th>
         </tr>
       </thead>
       <tbody>

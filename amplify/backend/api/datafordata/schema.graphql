@@ -1,19 +1,26 @@
 type Employee @model @auth(rules: [{allow: public}]) {
   id: ID!
+  empID: Int
+  employeename: String
+  empTeam: String
+  empPosition: String
+  empDate: AWSDate
+  pensionRetirement: String
+  qualifiedNew: String
+}
+
+type EmployeePension @model @auth(rules: [{allow: public}]) {
+  id: ID!
   empid: Int
-  empName: String
-  position: String
-  joindate: AWSDate
-  totalworkdays: Int
-  avgannualsal: Int
-  avgsalthrmonth: Int
-  currentmonthpension: Int
+  pensionDepositBalance: Int
+  outstandingyearpension: Int
   Year2018: Int
   Year2019: Int
   Year2020: Int
   Year2021Nov: Int
-  totalPension: Int
-  pensionHolder: Boolean
-  team: String
+  firstQuarter: Int
+  secondQuarter: Int
+  thirdQuarter: Int
+  subtotalforthQuarter: Int
 }
  
